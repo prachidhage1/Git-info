@@ -1,0 +1,294 @@
+Git command :-
+
+
+Problem kevha yeto jevha 1 repository madhe different file create keli tevha ekch file madhe continue karav lagt 
+git username=prachidhage
+git password = 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
+Pull problem asel tr  => git config pull.rebase true
+Push problem asel tr =>git push origin master  --force he use kru naye
+3 level of git
+1)git config  --system                                          (system level)
+2)git config - -global                                          (ec2 or root)
+3)git config                                                    (project level)
+sudo su
+sudo yum update  –y
+sudo yum install git  -y
+which git                                                                    (usr/bin/git)
+git  - - version                                                             (2.40)
+git config   - -global user.name “prachidhage”
+git config  - -global user.email “prachidhage3@gmail.com”
+git config  - - list                                                                          (to see username user email)
+git help
+man git add
+same both Mumbai and singapure above
+mkdir mumbaigit                                                                            (Create directory)
+ls
+cd  mumbaigit
+git init                                                                                        (git initialisation to convert it into local repo)
+ls  –a
+cat > mumbaifile                  write there
+dil ae nadaan tuze hua kya hai
+git status
+git add .
+git status
+git commit –m  “1st commit from Mumbai”
+git status                                                                                                    (to see where you are)
+git log                                                                                                         (ky commit kel check) 
+git show (commit id)                    or   git show  tagname                    (green madhe display hote)
+git remote  add origin (central url)
+git push  origin  master  
+enter username and password
+check on github…
+cat >mumbaifile1
+aakhir is marz ki dawa kya hai
+git status
+git add .
+git status
+git commit   –m “My second code from Mumbai”
+git status
+git log
+git show  (commit id)
+red wala old – means already add
+green wala new + means add jhala
+git push origin master
+username= and 
+pw= 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
+check on github
+singapure region:-
+mkdir singapuregit                                                                              (Create an directory
+cd singapure
+git init                                                                                                   (initialising init to convert local repo)
+ls  -a
+git log	nothing
+git status	nothing
+git remote add origin (url)
+git pull origin master                                                                            (complete code yete)
+git log
+git show (commit id)
+now add some code in the file
+cat >>mumbai1
+hame unse hai wafa ki ummid
+jinhe malum hai kin hi wafaa kya hai
+cat Mumbai1                                                                          to see
+git status
+git add  .
+git status
+git commit  -m  “my first commit from singapure”
+git status 
+git log
+git show commit id
+git push origin master
+mumbai region:-
+cd mumbaigit
+git log
+git pull origin master
+git log
+git show (commit id)
+*To ignore some file while committing  create one hidden file   .gitignore and enter file format which  you want to ignore
+for eg :-vi  .gitignore
+enter  * .css and    * .java
+cd mumbaigit
+vi  .gitignore
+[*.css
+[*.java
+git add  .gitignore
+git commit –m “ignore file format”
+git status
+create some text, .css and .java files and add then  by running  “gitadd”
+for eg:- touch file1.txt            file2.txt          file3.java            file 4.css
+touch file1.txt   file2.txt    file3.java     file4.css    file5.java
+ls 
+git status
+git add .
+git status
+git commit  -m  “ignore java and css file”
+git log
+git show commit id
+touch bhupinder.java                                                                           (don’t create beacause ignore)
+git status
+touch bhupinder.txt
+ls                                                                                                                (show file)
+git log   -1                                                                                                  (latest first comment)
+git log   - - oneline                                                                                   (all comment in one line)
+git log   - - grep “ignore”                                                                         (search ignore)
+_____________________________________________________________________________
+
+to see list of available braches     :-   git branch
+create a new brach                          :-  git branch  <bracnh name>
+to switch branch                              :-  git checkout   <name of the branch you want to go>
+ec2-user
+sudo su
+ls
+cd sigapuregit
+ls
+git log      - - oneline
+git branch                                                                                                              (to see how many branch)
+git branch   branch1 	                  (create a brach i. e branch1)
+git branch
+git checkout branch1                                                                                           (branch 1 madhe janyasathi)
+git branch
+ls
+git log    - - oneline
+cat  >branch1file
+Hello to all
+ls
+git  add   .
+git  commit  -m  “branch1 first commit”
+git log   - -oneline
+git checkout  master
+git log   - -oneline
+git branch 
+git checkout branch1
+cat  >secondfile
+ls
+git checkout master
+ls
+git checkout branch1
+git add  .
+git commit –m “second commit from branch1”
+git log    - -oneline
+Git checkout master
+ls
+git branch –d   branchname                                                                                 (for delete branch)
+git branch –D   branchname                                                                                 (forcefully delete)
+merge (concept) aai
+repository to repository can’t merge
+branch to branch can be merge 
+ls 
+git log   - - oneline
+git merge  branch1
+ls
+git log  - - oneline
+git push origin master
+username and password
+conflict :-
+git branch
+ls
+cat  >rajputfile
+hello Rajput write there
+git  add  .
+git  commit  -m  “first commit before conflict”
+git checkout brach1
+cat  > rajputfile
+hi Rajput write there
+git  add .
+git commit  -m  “commit from master”
+git   branch
+git  checkout  master
+git  merge  branch1
+vi rajputfile
+git status
+git  add  .
+git  commit  -m  “resolve conflict”
+git log  - - oneline
+
+*git stashing (temporary storage) :-
+touch demofile
+git  add  .
+git  commit  -m “demofile”
+git  branch
+vi  demofile
+first code write there
+suppose one man come to say complete new work 
+git stash                                                                                                                                          (save to stash)
+cat  demofile                                                                                                  (nothing display beacause stash)
+git  stash list
+vi  demofile 
+second code for client   write there
+cat  demofile
+git stash
+git stash list
+cat demofile
+git stash apply  stash @{1}
+cat demofile
+git add  .
+git  commit  -m  “first code done “
+git stash apply  stash @{0}
+vi demofile
+changes done 
+git add  .
+git commit  -m  “second code done”
+git  status
+git  log  - - oneline
+git  stash  list
+git  stash  clear                         (ithe stash madhe thevl tr te tsch rahte he delete sathi command)
+git stash list
+git reset (undo):-
+*to reset staging area   :-git reset   <filename>
+                                           git reset   .
+*to reset the deleting  of both from working directory and staging area 
+git reset   - - hard
+practical :-
+git branch
+cat  >testfile
+hello bhupinder  write there
+git  add   .
+git status
+git  reset   .
+git status
+git  add  .
+git  status
+git reset   - - hard 
+git status
+_______________________________________________________________________________
+git revert:-
+commit kelyanntr  code chukla asel tr previous code madhe ks yaych (commit vadhte , kaam kami)
+cat   >revertfile
+mushroom
+git  add   .
+git  commit  -m  “this is mushroom commit”
+cat  >revertfile
+garam masala
+chana masala
+mirch
+git  add  .
+git commit  -m “wrong commit”
+git revert (commit id jo wrong code aahe tyacha id)  
+ls
+vi revert file
+write there (please ignore the previous commit krn wrong aahe tyasathi)
+git log   - - oneline
+untracked  file remove:-
+touch filex   filey   filez  fileo
+ls 
+git status
+git clean   -n                                                                                                    (delete krta vicharte tith )
+git clean   -f                                                                                                                                     (delete)
+git log   - - oneline
+Tag:-
+git tag <tagname>                                                                                                             (lightweight tag, latest la )
+git tag  –a (important tag name)  -m “message put” < commit id>                           (annonated  tag)
+git   tag                                                                                                                                   (kyky tag aahe)
+git  show   tagname                                                                                                                     (to see)
+git  tag  -d  (tagname)                                                                                                              (delete tag)
+git tag
+git log  --oneline
+git clone repourl
+ls
+cd githubrepo
+ls
+show file Clone :-
+ls
+in github repository
+touch filez
+git  add   .
+git commit  -m  “new commit”
+git push origin master
+username and password
+Github branch create:
+Master branch click ----name put----create branch from master
+Create file in github :
+A
+dd file click----create new file----name put----code write----commit directly to the master branch.
+Branch merge in github:-
+pull request----compare and pull request----able to merge----create pull request-----this branch has no conflict with base branch-----merge pull request-----confirm merge
+git diff - -staged                                                                                               (staged madhe aahe te diste)
+git diff HEAD
+git difftool  - - staged
+git status  --short
+git reset - -hard HEAD^
+git reset - -soft HEAD^
+git log - - patch                                                                                         (changes in file)
+git log - - since= “1 week ago”                                                                 (last week ago)
+___________________________________________________________________________________________________________________________________________________________________________
+
