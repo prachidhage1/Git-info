@@ -3,7 +3,7 @@ Git command :-
 
 Problem kevha yeto jevha 1 repository madhe different file create keli tevha ekch file madhe continue karav lagt 
 git username=prachidhage
-git password = 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
+git password = ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 Pull problem asel tr  => git config pull.rebase true
 Push problem asel tr =>git push origin master  --force he use kru naye
 3 level of git
@@ -52,7 +52,7 @@ red wala old – means already add
 green wala new + means add jhala
 git push origin master
 username= and 
-pw= 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
+pw= ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 check on github
 singapure region:-
 mkdir singapuregit                                                                              (Create an directory
